@@ -8,5 +8,5 @@ Coin Card. Card for your coins, Card for your bitcoin.
 
 ```html
 <div class="coin-card" data-BTC="1PouzPJj5t3kCf5j7eYu3GXSE1PWuPkHQJ"></div>
-<script src="https://raw.github.com/fundon/coin-card/master/src/widget.js"></script>
+<script src="http://fangduncai.com/coin-card/src/widget.js"></script>
 ```
