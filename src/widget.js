@@ -1,9 +1,10 @@
 (function(w, d) {
 
 	var COINS = [ 'BTC', 'LTC', 'PPC', 'XPM', 'PTS' ];
+	var CURRENCIES = [ 'bitcoin', 'litecoin', 'peercoin', 'primecoin', 'protoShares' ];
 
 	var COIN_TMP = '<li>'
-			+ '<span class="logo"><i title="{type}" class="icon {type}-icon"></i></span>' 
+			+ '<a class="logo" href="{currency}:{address}" target="_blank"><i title="{type}" class="icon {type}-icon"></i></a>' 
 			+ '<span class="address"><input readonly="readonly" type="text" value="{address}" /></span>'
 		+ '</li>';
 
@@ -41,7 +42,10 @@
 			type = COINS[i];
 			address = getData(card, type);
 			if (address) {
-				items += COIN_TMP.replace(/{type}/g, type).replace('{address}', address);
+				items += COIN_TMP
+					.replace(/{currency}/, CURRENCIES[i])
+					.replace(/{type}/g, type)
+					.replace(/{address}/g, address);
 			}
 		}
 
